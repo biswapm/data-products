@@ -1,0 +1,46 @@
+---
+title: "R Markdown and Leaflet"
+author: "Biswa Pujarini"
+date: "07/09/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+## Assignment:
+```{r}
+library(leaflet)
+```
+```{r}
+new_icon <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = 'black',
+  library = 'ion',
+  markerColor = "red"
+)
+
+content <- paste(sep = "<br/>",
+  "<b>Cafe Glück</b>",
+  "Nallagandla, Serilingampally",
+  "Hyderabad, Telangana 500019"
+)
+
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addAwesomeMarkers(lat = 17.4645704, lng = 78.2891014,
+        icon = new_icon,
+        popup = "Good Coffee at local") %>%
+    addPopups(lat = 17.4645704, lng = 78.2891014, content,
+        options = popupOptions(closeButton = FALSE)
+    )
+my_map
+```
