@@ -3,8 +3,8 @@ title: "R-Markdown-Presentation-Plotly"
 author: "Biswa Pujarini"
 date: "08/09/2020"
 output:
-  html_document:
-    df_print: paged
+  ioslides_presentation: default
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE,message=FALSE,warning=FALSE}
