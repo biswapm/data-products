@@ -1,0 +1,12 @@
+name: ShineApp_dataproducts
+title: ShineApp_dataproducts
+username:
+account: biswapm
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2768642
+bundleId: 3605707
+url: https://biswapm.shinyapps.io/ShineApp_dataproducts/
+when: 1599559021.50569
+asMultiple: FALSE
+asStatic: FALSE
